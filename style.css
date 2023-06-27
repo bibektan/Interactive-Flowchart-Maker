@@ -40,6 +40,17 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: grab;
+}
+.boundary-rectangle{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 .size-edit-box-top-left{
     position: absolute;
@@ -106,16 +117,28 @@
     border-radius: 50%;
     right: -3px;
 }
-
+.line-wrap{
+    width: 180px;
+    height: 18px;
+    border: 1px dashed blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: grab;
+    bottom: 0px;
+    right: 0px;
+}
 .line{
     width: 150px;
     height: 2px;
     background-color: black;
     margin: 12px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
 }
 .line-magnet-right{
     width: 6px;
@@ -124,5 +147,23 @@
     border: 1px solid black;
     border-radius: 50%;
     position: absolute;
+    left: 0px;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 120px;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 0px;
     left: 0px;
 }

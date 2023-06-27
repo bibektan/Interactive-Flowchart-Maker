@@ -35,3 +35,41 @@ middleRight.addEventListener('pointermove', e => {
     isDragging = false;
   });
   
+
+  
+  // line intersection api
+  var targetDiv = document.querySelector(".boundary-rectangle");
+  var magnetElement = document.querySelector(".magnet");
+
+  var box1 = document.querySelector(".box1");
+  var box2 = document.querySelector(".box2");
+    
+  function handleIntersection(entries) {
+    entries.forEach(function(entry) {
+      console.log('hello');
+      console.log(entry.target);
+      if (entry.isIntersecting) {
+        // var targetDiv = entry.target;
+        console.log("Magnet element is intersecting with the target div: ", entry.target);
+      }
+    });
+  }
+  
+  var observerOptions = {
+    root: box2,
+    threshold: 0 // Adjust the threshold value as needed
+  };
+  
+  var observer = new IntersectionObserver(handleIntersection, observerOptions);
+  
+  observer.observe(box1);
+  // targetDivs.forEach(function(targetDiv) {
+  // });
+  
+  // var numb = [2, 7, 12, 18, 25, 37, 41, 46, 48, 55, 57, 62, 66, 69, 74, 77, 82, 88, 89, 93, 97, 99];
+  // var closest = document.querySelector("#closest");
+  // closest.addEventListener("click", e=>{
+
+  // })
+
+
