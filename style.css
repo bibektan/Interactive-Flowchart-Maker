@@ -20,10 +20,11 @@
     background: grey;
     padding: 15px 30px;
     margin: 10px 10px;
+    cursor: pointer;
 }
 
 .white-board{
-    /* border: 3px dashed grey; */
+    border: 1px dashed grey;
     margin: 15px 0px;
     /* padding: 50px; */
     height: 600px;
@@ -143,6 +144,7 @@
 
 
 /* delete */
+
 .box{
     width: 100px;
     height: 100px;
@@ -152,7 +154,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
+    cursor: grab;
 }
 .box-right{
     position: absolute;
@@ -191,7 +194,7 @@
     bottom: -6px;
 }
 
-.flow{
+/* .flow{
     width: 300px;
     height: 10px;
     background: black;
@@ -199,7 +202,7 @@
     top: 100px;
     left: 300px;
     transform: rotate(0deg);
-}
+} */
 .flow-left{
     width: 12px;
     height: 10px;
@@ -216,3 +219,55 @@
     position: absolute;
     right: 0px;
 }
+
+@keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blink {
+    animation: blink-animation 0.5s infinite;
+  }
+  
+  .test{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    cursor: grabbing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .test-right{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    right: -6px;
+  }
+  .test-left{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    left: -6px;
+  }
+  .test-top{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    top: -6px;
+  }
+  .test-bottom{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    bottom: -6px;
+  }
